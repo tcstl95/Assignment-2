@@ -103,7 +103,7 @@ const scoringAlgorithms = [
   }];
 
 function scorerPrompt(){
-  let userInput= input.question("Which scoring algorithm would you like to use?");
+  let userInput= input.question("Which scoring algorithm would you like to use? Enter 0 for Simple Score, 1 for Bonus Vowels, or 2 for Scrabble:");
   console.log(`Algorithm Name: ${scoringAlgorithms[userInput].name}`);
   console.log(`Description: ${scoringAlgorithms[userInput].description}`);
    console.log(`Score for '${scrabbleInput}': ${scoringAlgorithms[userInput].scorerFunction(scrabbleInput)}`);
