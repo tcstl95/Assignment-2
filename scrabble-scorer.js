@@ -76,6 +76,9 @@ function vowelBonusScorer(word) {
 }
 
 function scrabbleScorer(word) {
+  if (typeof word !== 'string') {
+      return 0;
+   }
    let scrabbleScorer = 0;
    let newPointStructure = transform(oldPointStructure);
    word = word.toLowerCase();
@@ -114,7 +117,7 @@ function scorerPrompt(){
    vowelBonusScorer();
    }
    else if (userInput === "2") {
-   oldScrabbleScorer();
+   scrabbleScorer();
    }
    else {
      console.log("Invalid input. Please try again.");
